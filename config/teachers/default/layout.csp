@@ -1,0 +1,10 @@
+package layout
+@begin
+constant
+# 姓名
+    name        ="教师1",
+# 照片(必须是24bit BMP图片)
+    photo       ="photo.bmp",
+# 简介
+    introduce   ="副教授，XXX实验室负责人\n电话12345678"
+@end

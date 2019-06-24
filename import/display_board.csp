@@ -1,0 +1,10 @@
+package display_board
+class view
+    var gui=null
+    var root_path=null
+    function init()
+    end
+    function do_layout()
+        this.gui.text("display_board.view.do_layout")
+    end
+end

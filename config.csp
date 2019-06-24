@@ -1,0 +1,32 @@
+package config
+@begin
+constant
+# 实验室名称
+    laboratory_name    ="创客空间B208+",
+# 资源文件目录
+    resource_directory ="resource",
+# 配置文件目录
+    config_directory   ="config",
+# 教师档案目录
+    teacher_profile    ="teachers",
+# 场景档案目录
+    scene_profile      ="scenes",
+# 档案配置文件名
+    config_name        ="layout",
+# 界面字体
+    font_name          ="SourceHanSans.otf",
+# 字体大小
+    font_size          =48,
+# Logo图像(必须是24bit BMP图片)
+    logo_name          ="logo.bmp",
+# 关于图像(必须是24bit BMP图片)
+    about_name         ="about.bmp"
+@end
+@begin
+constant activity_list =
+{
+# 活动列表，两个元素分别代表着活动名称和活动注释
+    #"示例活动1":"2019年5月1日晚上7点(A小组)",
+    "C++进阶课程":"2019年春季学期每周六晚七点(智锐科创计算机社团 李登淳)"
+}
+@end

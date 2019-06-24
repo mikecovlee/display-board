@@ -1,0 +1,28 @@
+# 本模板中编写的代码只是必需代码
+# 可根据自己需要增加辅助代码
+# 只需更改标记为“可修改”的函数即可
+
+# 声明包(无需更改)
+
+package layout
+
+# 引入程序API(无需更改)
+
+import display_board
+
+# 必须定义继承于display_board.view的scene类(无需更改)
+# display_board.view常用的两个成员：
+# this.gui：图形界面API名称空间，基本上兼容CovScript标准中的GUI，只是加入了中文支持(请保存为UTF-8编码)
+# this.root_path：本文件所在目录，方便加载资源使用
+
+struct scene extends display_board.view
+    function init() override
+        # 在场景加载时运行(可修改)
+    end
+    function do_layout() override
+        # 编写场景布局(可修改)
+        this.gui.text("实验室介绍")
+        this.gui.indent()
+        this.gui.text_wrappered("本实验室是依托于计算机院建设的一流创新创业实验室，致力于培养相关创新人才和团队。")
+    end
+end

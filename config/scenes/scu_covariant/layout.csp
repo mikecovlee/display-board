@@ -1,0 +1,31 @@
+package layout
+import display_board, imgui_font
+struct scene extends display_board.view
+    var logo=null
+    var photo=null
+    var font=null
+    function init() override
+        logo=this.gui.load_bmp_image(this.root_path+system.path.separator+"logo.bmp")
+        photo=this.gui.load_bmp_image(this.root_path+system.path.separator+"photo.bmp")
+        font=this.gui.add_font_extend_cn(imgui_font.source_han_sans, 70)
+    end
+    function do_layout() override
+        this.gui.push_font(font)
+        this.gui.text("入驻团队：智锐科创计算机社团")
+        this.gui.pop_font()
+        this.gui.image(logo, this.gui.vec2(400, 400))
+        this.gui.same_line()
+        this.gui.image(photo, this.gui.vec2(400, 400))
+        this.gui.indent()
+@begin
+this.gui.text_wrappered("
+智锐科创计算机社团(Covariant Computer Association of Sichuan University, SCU Covariant)，创建于2018年9月，
+是挂靠于四川大学计算机学院的学术型社团和中国智锐科创工作室(Covariant Innovation, Covariant.cn)旗下的两大学生组织之一。\n
+其宗旨为“用最优秀的理论，做最出色的工程”，从事计算机基础科学研究、开源社区维护与推广、开源项目孵化、为中国智锐科创工作室培养并输送优秀人才等工作，希望能以自己微薄的力量为中国计算机行业的发展添砖加瓦。\n
+项目主页：https://github.com/scu-covariant\n
+网址：http://scu.covariant.cn\n
+邮箱：mikecovlee@163.com
+")
+@end
+    end
+end
